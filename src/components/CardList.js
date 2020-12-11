@@ -11,15 +11,15 @@ const CardList = ({launches}) => {
             }}
         >
             {
-            launches.map(({flight_number, mission_name, launch_date_local, rocket: {rocket_name}}, i) => {
+            launches.map(({ launch_year, flight_number, mission_name, launch_date_utc, rocket: {rocket_name}}, i) => {
                 return (
                     <Card 
                         key={i} 
-                        id={launches[i]['launch_year']}
-                        number={`#${launches[i]['flight_number']}`}
-                        name={launches[i]['mission_name']} 
-                        date={launches[i]['launch_date_local']} 
-                        series={launches[i]['rocket']['rocket_name']}
+                        id={launch_year}
+                        number={`#${flight_number}`}
+                        name={mission_name}
+                        date={launch_date_utc}
+                        series={rocket_name}
                         />
                     );
                 })     
