@@ -40,11 +40,7 @@ class App extends Component {
         const { launches, year } = this.state; 
 		const filteredLaunches = launches.filter(launch => {
 			return launch.launch_year === year;
-        })
-        // const test = [...this.state.launches];
-        // const sortedNumbers = test.sort((a, b) => {
-        //     return b.launch_year - a.launch_year;
-        //   });      
+        })    
 
         const test = [...this.state.launches];
         const sortedArray= test.sort((a,b) => {
@@ -59,16 +55,20 @@ class App extends Component {
 
         return (
             <>
-            <Header getFreshData={this.getFreshData}/>
+            <div>
+                <Header getFreshData={this.getFreshData}/>      
+            </div>
             <div style={{display: 'flex'}}>
                 <img alt='' src={'./images/launch-home.png'}
                     style={{height: '60%', width: '37vw', padding: '2.6vw'}}/>
                 <div>
-                <Filter onSelectChange={this.onSelectChange}/>
-                <Sort toggleSort={this.onToggleSort} isDescending={this.state.isDescending}/>
-                <Scroll>
-                    <CardList launches={this.state.year !== null ? (this.state.isDescending ? filteredSorted : filteredLaunches) : (this.state.isDescending ? sortedArray : this.state.launches) }/> 
-                </Scroll>
+                    <div style={{display: 'flex', justifyContent: 'flex-end', fontFamily: 'BrandonGrotesque-Regular'}}>
+                        <Filter onSelectChange={this.onSelectChange}/>
+                        <Sort toggleSort={this.onToggleSort} isDescending={this.state.isDescending}/>
+                    </div>
+                    <Scroll>
+                        <CardList launches={this.state.year !== null ? (this.state.isDescending ? filteredSorted : filteredLaunches) : (this.state.isDescending ? sortedArray : this.state.launches) }/> 
+                    </Scroll>
                 </div>
             </div>
             </>

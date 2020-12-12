@@ -7,7 +7,8 @@ const CardList = ({launches}) => {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center'
+                alignItems: 'center',
+                width: '100%'
             }}
         >
             {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Filter = ({onSelectChange}) => {
     return (
-        <button>
+        <button style={{backgroundColor: '#215184', color: 'white', borderColor: '#215184', marginRight: '5px'}}>
             Filter by Year
             <select onChange={onSelectChange}>
                 <option>{'2006'}</option>
