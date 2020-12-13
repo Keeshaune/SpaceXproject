@@ -4,7 +4,7 @@ import dateFormatter from '../utils/dateFormatter';
 
 const Card = ({number, name, date, series}) => {
     return (
-        <div className='bg-white dib br3 ma2 grow bw2 shadow-5'
+        <div className='bg-white dib br3 ma2 bw2 shadow-3'
             style={{
                 width: '100%', 
                 height: '3.5rem',
@@ -17,8 +17,8 @@ const Card = ({number, name, date, series}) => {
                 <h2>{name}</h2>
             </div>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
-                <p>{dateFormatter(date)}</p>
-                <h3>{series}</h3>
+                <p style={{margin: '0px'}}>{dateFormatter(date)}</p>
+                <h3 style={{margin: '0px'}}>{series}</h3>
             </div>
         </div>
     );
