@@ -9,9 +9,9 @@ const Header = ({getFreshData}) => {
                 <h1 style={{padding: '0px', fontFamily: 'BrandonGrotesque-Regular', fontSize: '20px', color: '#545454'}}>Launches</h1>    
             </div>
             <button onClick={getFreshData} style={{backgroundColor: '#215184', color: 'white', borderColor: '#215184',
-                                                    borderTopLeftRadius: '15px', borderBottomLeftRadius: '15px',
-                                                    width: '9.3%', height: '4.2', fontSize: '16px'}}>
-                Reload Data
+                                                    borderTopLeftRadius: '15px', borderBottomLeftRadius: '15px', paddingLeft:'15px',
+                                                    width: '10%', height: '4.2%', fontSize: '16px', display: 'flex', justifyContent:'space-between'}}>
+                Reload Data   
                 <img alt='' src={'../images/refresh.png'}/>
             </button>
         </div>
