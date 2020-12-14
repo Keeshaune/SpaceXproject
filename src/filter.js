@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Filter = ({onSelectChange}) => {
+const Filter = ({onSelectChange, launches}) => {
     return (
         <button style={{backgroundColor: '#215184', color: 'white', borderColor: '#215184', marginRight: '5px'}}>
             Filter by Year
