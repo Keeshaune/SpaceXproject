@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import CardList from './components/CardList';
 import Scroll from './components/Scroll';
-import Filter from './filter';
+import Filter from './components/filter';
 import Header from './components/Header';
 import Sort from './components/Sort';
 import './App.css'
